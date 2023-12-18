@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+.product {
+    left: 37%;
+    top: 17%;
+    width: 375px;
+    border: 3px solid #f3f3f3;
+}
+.product, .hover-image, .rating, .button-panel, .add-to-cart-btn{
+    position: absolute;
+}
+.product:hover .add-to-cart-btn{
+    visibility: visible;
+}
+.image, .hover-image{
+    height: 370px;
+}
+.image{
+    background: url(https://demo.ishithemes.com/opencart/OPC020/image/cache/catalog/productsimage/1-370x370.jpg);
+}
+.hover-image{
+    background: url(https://demo.ishithemes.com/opencart/OPC020/image/cache/catalog/productsimage/10-370x370.jpg);
+    transform: scale(0, 1);
+    transition: transform 1s;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+}
+.product:hover .hover-image{
+    transform: scale(1);
+}
+.rating{
+    left: 50%;
+    bottom: 25%;
+    transform: translateX(-50%);
+}
+.star{
+    font-size: 20px;
+    color: #d0d0d0;
+}
+.yellow{
+    color: #f5c60a;
+}
+.caption{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    padding: 20px 5px;
+    background: #f3f3f3;
+    text-align: center;
+}
+.product-name, .price{
+    font-weight: 500;
+}
+.product-name{
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 10px;
+}
+.price{
+    font-size: 16px;
+}
+.add-to-cart-btn {
+    text-decoration: none;
+    text-transform: uppercase;
+    left: 33%;
+    bottom: 4%;
+    padding: 6px 10px;
+}
+.add-to-cart-btn, .product:hover .price{
+    visibility: hidden;
+}
+.add-to-cart-btn:hover, .button-panel > a{
+    background: #000;
+}
+.add-to-cart-btn:hover, .button-panel > a > i{
+    color: #fff;
+}
+.button-panel{
+    display: flex;
+    flex-direction: column;
+    right: 1%;
+    top: 1%;
+    gap: 4px;
+    opacity: 0;
+    transition: opacity 1s;
+    overflow: hidden;
+}
+.button-panel > a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    transform: translateX(20px);
+    transition: transform .5s;
+}
+.button-panel > a > i{
+    padding: 12px 0;
+}
+.button-panel > a:hover, .add-to-cart-btn{
+    background: #f5c60a;
+}
+.button-panel > a:hover > i, .add-to-cart-btn{
+    color: #000;
+}
+.button-panel > a:nth-child(2){
+    transition-delay: .1s;
+}
+.button-panel > a:nth-child(3){
+    transition-delay: .2s;
+}
+.product:hover .button-panel{
+    opacity: 1;
+}
+.product:hover .button-panel > a{
+    transform: translateX(0);
+}
